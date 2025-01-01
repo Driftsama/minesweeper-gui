@@ -24,9 +24,9 @@ public class SpriteReader {
     private void extractTile() {
         int sheetWidth = spriteSheet.getWidth();
         int sheetHeight = spriteSheet.getHeight();
-//        List<ImageIcon> icons = new ArrayList<>();
         for (int y = 0; y < sheetHeight / tileHeight; y++) {
             for (int x = 0; x < sheetWidth / tileWidth; x++) {
+
                 // Extract each tile
                 BufferedImage tile = spriteSheet.getSubimage(
                         x * tileWidth, y * tileHeight, tileWidth, tileHeight
@@ -56,7 +56,7 @@ public class SpriteReader {
             JFrame frame = new JFrame("Sprite Viewer");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setLayout(new GridLayout(9, 9)); // Adjust grid size for preview
-            frame.setSize(2400, 2400);
+            frame.setSize(2160, 2160);
 
             // Iterate through the sprite sheet
             int sheetWidth = spriteSheet.getWidth();
